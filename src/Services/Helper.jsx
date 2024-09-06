@@ -10,6 +10,8 @@ import NFT9 from '../assets/NFT9.png'
 import NFT10 from '../assets/NFT10.webp'
 import NFT11 from '../assets/NFT11.jpg'
 import NFT12 from '../assets/NFT12.jpg'
+
+export const TRXNURL = 'www.stellar.io'
 export const TOKENS = [
     {
         id: '1',
