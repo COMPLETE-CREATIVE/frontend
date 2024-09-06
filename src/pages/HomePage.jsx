@@ -36,7 +36,7 @@ function HomePage() {
                 <a href="marketplace"> Explore Creative Works</a>
               </button>
               <button className="bg-transparent border border-white hover:bg-white hover:text-blue-900 text-white font-bold py-2 px-4 rounded">
-                <a href="about">Learn More</a>
+                <a href="about">Learn More!!</a>
               </button>
             </div>
           </div>
