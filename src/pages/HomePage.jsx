@@ -143,7 +143,7 @@ function HomePage() {
               </p>
             </div>
             <div className="w-full md:w-1/2 p-4">
-              <img src={Hand} alt="some" className="w-full h-auto" />
+              <img src={Hand} alt="some hand" className="w-full h-auto" />
             </div>
           </div>
         </section> */}
@@ -152,7 +152,7 @@ function HomePage() {
         {/* <section className="py-0">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
             <div className="w-full md:w-1/2 p-4">
-              <img src={Hand} alt="some" className="w-full h-auto" />
+              <img src={Hand} alt="some thing" className="w-full h-auto" />
             </div>
             <div className="w-full md:w-1/2 p-4">
               <div className="text-5xl font-bold">Crowdfund Your Projects</div>
@@ -175,7 +175,7 @@ function HomePage() {
               </p>
             </div>
             <div className="w-full md:w-1/2 p-4">
-              <img src={Hand} alt="some" className="w-full h-auto" />
+              <img src={Hand} alt="some can" className="w-full h-auto" />
             </div>
           </div>
         </section> */}
@@ -381,7 +381,7 @@ function HomePage() {
                 <div class="flex items-center">
                   <img
                     src={Rixa}
-                    alt="User photo"
+                    alt="User photo 1"
                     class="w-12 h-12 rounded-full mr-4"
                   />
                   <div>
@@ -399,7 +399,7 @@ function HomePage() {
                 <div class="flex items-center">
                   <img
                     src={Rixa}
-                    alt="User photo"
+                    alt="User photo 2"
                     class="w-12 h-12 rounded-full mr-4"
                   />
                   <div>
@@ -417,7 +417,7 @@ function HomePage() {
                 <div class="flex items-center">
                   <img
                     src={Rixa}
-                    alt="User photo"
+                    alt="User photo 3"
                     class="w-12 h-12 rounded-full mr-4"
                   />
                   <div>

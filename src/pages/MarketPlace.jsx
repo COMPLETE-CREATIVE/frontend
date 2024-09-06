@@ -79,7 +79,7 @@ try {
           <img
             // src={NFT2}
             src={token.image}
-            alt="Token Image"
+            alt="Token "
             className="w-full h-48 object-cover rounded-lg mb-4"
           />
           <div className="mb-4">
