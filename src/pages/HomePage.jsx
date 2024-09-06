@@ -399,7 +399,7 @@ function HomePage() {
                 <div class="flex items-center">
                   <img
                     src={Rixa}
-                    alt="User photo 2"
+                    alt="User  2"
                     class="w-12 h-12 rounded-full mr-4"
                   />
                   <div>
