@@ -1,7 +1,7 @@
 import React from "react";
-import Rixa from "../assets/Rixa.jpeg";
+// import Rixa from "../assets/Rixa.jpeg";
 import NFT1 from "../assets/NFT1.avif";
-import NFT2 from "../assets/NFT2.webp";
+// import NFT2 from "../assets/NFT2.webp";
 import { TOKENS } from "../Services/Helper";
 import { Link } from "react-router-dom";
 

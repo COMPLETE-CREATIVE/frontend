@@ -22,13 +22,13 @@ function Header() {
       <img
                     // src={Rixa}
                     src={Logo}
-                    alt="User photo"
+                    alt="User "
                     class="w-12 h-12 rounded-full mr-2"
                   />      {/* <!-- Links (Hidden on small screens) --> */}
       <div class="hidden md:flex space-x-4">
         {/* <a href="#" class="hover:text-gray-300">Home</a> */}
         <a href="marketplace" class="hover:text-gray-300 hover:underline">Marketplace</a>
-        <a href="#" class="hover:text-gray-300">Start a Project</a>
+        <a href="/" class="hover:text-gray-300">Start a Project</a>
         <a href="about" class="hover:text-gray-300">About</a>
         <a href="blog" class="hover:text-gray-300">Blog</a>
       </div>

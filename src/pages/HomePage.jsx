@@ -1,6 +1,6 @@
 import React from "react";
 import Girl from "../assets/girl.jpg";
-import Hand from "../assets/hand.jpg";
+// import Hand from "../assets/hand.jpg";
 import Aya from "../assets/Aya_logo.jfif";
 import Stellar from "../assets/stellar-logo.png";
 import DFS from "../assets/dfs_lab.jpeg";
@@ -381,7 +381,7 @@ function HomePage() {
                 <div class="flex items-center">
                   <img
                     src={Rixa}
-                    alt="User photo 1"
+                    alt="User  1"
                     class="w-12 h-12 rounded-full mr-4"
                   />
                   <div>
@@ -417,7 +417,7 @@ function HomePage() {
                 <div class="flex items-center">
                   <img
                     src={Rixa}
-                    alt="User photo 3"
+                    alt="User  3"
                     class="w-12 h-12 rounded-full mr-4"
                   />
                   <div>
