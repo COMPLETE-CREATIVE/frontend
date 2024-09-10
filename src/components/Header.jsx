@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from '../assets/logo.png'
+import { checkConnection, retrievePublicKey } from "../Services/Helper";
 // import Rixa from "../assets/Rixa.jpeg";
 
 
 function Header() {
+
+  const [connect, setConnect] = useState("Conect Wallet")
+  const [publicKey, setPublicKey] = useState("Wallet not connected...")
+  const [loading, setLoading] = useState("Loading...")
+
+  async function ConnectWallet(){
+    if (await checkConnection()){
+
+      setConnect("Connected!!")
+      setPublicKey(await retrievePublicKey())
+      console.log(retrievePublicKey);
+      
+    }
+    
+  }
+
+
   document.addEventListener('DOMContentLoaded', function() {
     var menuButton = document.querySelector('.md:hidden');
     var mobileMenu = document.querySelector('.md:hidden + .hidden');
@@ -34,7 +52,8 @@ function Header() {
       </div>
     </div>
     {/* <!-- Connect Wallet Button --> */}
-    <button class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded">Connect Wallet</button>
+    <button class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded" onClick={ConnectWallet}>{connect}</button>
+    <span>{publicKey}</span>
     {/* <!-- Mobile Menu Button (visible on small screens) --> */}
     <button class="md:hidden flex items-center px-3 py-2 border rounded text-gray-400 border-gray-600 hover:text-white hover:border-white">
       <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

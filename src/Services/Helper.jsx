@@ -10,6 +10,58 @@ import NFT9 from '../assets/NFT9.png'
 import NFT10 from '../assets/NFT10.webp'
 import NFT11 from '../assets/NFT11.jpg'
 import NFT12 from '../assets/NFT12.jpg'
+
+import {
+    isConnected,
+    getAddress,
+    signAuthEntry,
+    signTransaction,
+    requestAccess,
+    setAllowed,
+  } from "@stellar/freighter-api";
+
+// export const isAppConnected = await isConnected();
+
+// if (isAppConnected.isConnected) {
+//   alert("User has Freighter!");
+//   console.log(isConnected);
+  
+// }
+
+export async function checkConnection(){
+    const isAllowed = await setAllowed()
+    if (isAllowed){
+        return isAllowed
+    }
+}
+
+export const retrievePublicKey = async () => {
+    const accessObj = await requestAccess();
+  
+    if (accessObj.error) {
+      return accessObj.error;
+    } else {
+      return accessObj.address;
+      
+    }
+  };
+  
+  const result = retrievePublicKey();
+  console.log(retrievePublicKey);
+  
+
+//   export const shortenPublicKey(publicKey){
+//     if (publicKey.length >= 8){
+//         return publicKey
+//     }
+
+//     const firstFourLetters = publicKey.slice(0,4)
+//     const lastFourLetters = publicKey.slice(-4)
+//     console.log(shortenPublicKey("ASDFGHJKL"));
+    
+//     return `${firstFourLetters}...${lastFourLetters}`
+//   }
+
 export const TOKENS = [
     {
         id: '1',
