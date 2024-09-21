@@ -34,14 +34,15 @@ header ul li {
 }
 
 nav{
-  /* display: flex; */
+  display: flex;
+  gap: 18px;
   /* width: 1200px; */
   /* flex-direction: column; */
   /* padding:20px, 50px, 10px, 10px; */
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
+  align-items: center;
 
-  background-color: turquoise;
+  /* background-color: turquoise; */
 }
 
 nav ul{
@@ -110,4 +111,14 @@ img{
 
 .hero-section{
   color: rgb(239, 243, 200);
+}
+.btn{
+  color: black;
+  background-color: rgb(61, 110, 255);;
+  width: 178px;
+  height: 40px;
+  border-radius: 12px;
+  align-items: center;
+  padding: 8px, 16px;
+  gap: 8px;
 }

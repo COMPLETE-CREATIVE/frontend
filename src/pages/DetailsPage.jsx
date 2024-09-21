@@ -24,7 +24,7 @@ function DetailsPage() {
               <div className="flex justify-center">
                 <img
                   src={token.image}
-                  alt="Token Image"
+                  alt="Token "
                   className="w-full h-auto object-cover rounded-lg shadow-md"
                 />
               </div>
