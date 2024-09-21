@@ -7,7 +7,7 @@ function Blog() {
       <div className="container mx-auto md:px-12">
         <div className="grid md:grid-cols-2 bg-blue-500 md:gap-12">
           <div className="">
-            <img className="rounded-lg" src={NFT8}></img>
+            <img className="rounded-lg" src={NFT8} alt="none"></img>
           </div>
           <div>
             <div className="mb-4 mt-4">Creator</div>
