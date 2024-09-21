@@ -1,3 +1,14 @@
+
+import React from "react";
+import Logo from "../assets/logo.png";
+// import Rixa from "../assets/Rixa.jpeg";
+
+function Header() {
+  document.addEventListener("DOMContentLoaded", function () {
+    var menuButton = document.querySelector(".md:hidden");
+    var mobileMenu = document.querySelector(".md:hidden + .hidden");
+
+
 import React, { useState } from "react";
 import Logo from "../assets/logo.png";
 import {
@@ -39,6 +50,7 @@ function Header() {
     var menuButton = document.querySelector(".md:hidden");
     var mobileMenu = document.querySelector(".md:hidden + .hidden");
 
+
     menuButton.addEventListener("click", function () {
       mobileMenu.classList.toggle("hidden");
     });
@@ -50,19 +62,33 @@ function Header() {
         <div class="container mx-auto px-6 flex items-center justify-between">
           <div class="flex items-center space-x-4">
             {/* <!-- Logo --> */}
+
+            <a href="/">
+            <img
+              // src={Rixa}
+              src={Logo}
+              alt="User photo"
+              class="w-12 h-12 rounded-full mr-2"
+            />{" "}</a>
+
             <img
               // src={Rixa}
               src={Logo}
               alt="User "
               class="w-12 h-12 rounded-full mr-2"
             />{" "}
+
             {/* <!-- Links (Hidden on small screens) --> */}
             <div class="hidden md:flex space-x-4">
               {/* <a href="#" class="hover:text-gray-300">Home</a> */}
               <a href="marketplace" class="hover:text-gray-300 hover:underline">
                 Marketplace
               </a>
+
+              <a href="#" class="hover:text-gray-300">
+
               <a href="/" class="hover:text-gray-300">
+
                 Start a Project
               </a>
               <a href="about" class="hover:text-gray-300">
@@ -74,11 +100,16 @@ function Header() {
             </div>
           </div>
           {/* <!-- Connect Wallet Button --> */}
+
+          <button class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded">
+            Connect Wallet
+
           <button
             class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded"
             onClick={ConnectWallet}
           >
             {connect}
+
           </button>
           {/* <!-- Mobile Menu Button (visible on small screens) --> */}
           <button class="md:hidden flex items-center px-3 py-2 border rounded text-gray-400 border-gray-600 hover:text-white hover:border-white">
