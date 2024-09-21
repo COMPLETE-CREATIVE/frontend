@@ -1,12 +1,12 @@
 
-import React from "react";
-import Logo from "../assets/logo.png";
-// import Rixa from "../assets/Rixa.jpeg";
+// import React from "react";
+// import Logo from "../assets/logo.png";
+// // import Rixa from "../assets/Rixa.jpeg";
 
-function Header() {
-  document.addEventListener("DOMContentLoaded", function () {
-    var menuButton = document.querySelector(".md:hidden");
-    var mobileMenu = document.querySelector(".md:hidden + .hidden");
+// function Header() {
+//   document.addEventListener("DOMContentLoaded", function () {
+//     var menuButton = document.querySelector(".md:hidden");
+//     var mobileMenu = document.querySelector(".md:hidden + .hidden");
 
 
 import React, { useState } from "react";
@@ -85,7 +85,7 @@ function Header() {
                 Marketplace
               </a>
 
-              <a href="#" class="hover:text-gray-300">
+              <a href="#" class="hover:text-gray-300"/>
 
               <a href="/" class="hover:text-gray-300">
 
@@ -101,8 +101,7 @@ function Header() {
           </div>
           {/* <!-- Connect Wallet Button --> */}
 
-          <button class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded">
-            Connect Wallet
+      
 
           <button
             class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded"
