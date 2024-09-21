@@ -1,6 +1,6 @@
 import React from "react";
 import Girl from "../assets/girl.jpg";
-import Hand from "../assets/hand.jpg";
+// import Hand from "../assets/hand.jpg";
 import Aya from "../assets/Aya_logo.jfif";
 import Stellar from "../assets/stellar-logo.png";
 import DFS from "../assets/dfs_lab.jpeg";
@@ -36,7 +36,7 @@ function HomePage() {
                 <a href="marketplace"> Explore Creative Works</a>
               </button>
               <button className="bg-transparent border border-white hover:bg-white hover:text-blue-900 text-white font-bold py-2 px-4 rounded">
-                <a href="about">Learn More</a>
+                <a href="about">Learn More!!</a>
               </button>
             </div>
           </div>
@@ -143,7 +143,7 @@ function HomePage() {
               </p>
             </div>
             <div className="w-full md:w-1/2 p-4">
-              <img src={Hand} alt="some" className="w-full h-auto" />
+              <img src={Hand} alt="some hand" className="w-full h-auto" />
             </div>
           </div>
         </section> */}
@@ -152,7 +152,7 @@ function HomePage() {
         {/* <section className="py-0">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
             <div className="w-full md:w-1/2 p-4">
-              <img src={Hand} alt="some" className="w-full h-auto" />
+              <img src={Hand} alt="some thing" className="w-full h-auto" />
             </div>
             <div className="w-full md:w-1/2 p-4">
               <div className="text-5xl font-bold">Crowdfund Your Projects</div>
@@ -175,7 +175,7 @@ function HomePage() {
               </p>
             </div>
             <div className="w-full md:w-1/2 p-4">
-              <img src={Hand} alt="some" className="w-full h-auto" />
+              <img src={Hand} alt="some can" className="w-full h-auto" />
             </div>
           </div>
         </section> */}
@@ -381,7 +381,7 @@ function HomePage() {
                 <div class="flex items-center">
                   <img
                     src={Rixa}
-                    alt="User photo"
+                    alt="User  1"
                     class="w-12 h-12 rounded-full mr-4"
                   />
                   <div>
@@ -399,7 +399,7 @@ function HomePage() {
                 <div class="flex items-center">
                   <img
                     src={Rixa}
-                    alt="User photo"
+                    alt="User  2"
                     class="w-12 h-12 rounded-full mr-4"
                   />
                   <div>
@@ -417,7 +417,7 @@ function HomePage() {
                 <div class="flex items-center">
                   <img
                     src={Rixa}
-                    alt="User photo"
+                    alt="User  3"
                     class="w-12 h-12 rounded-full mr-4"
                   />
                   <div>
