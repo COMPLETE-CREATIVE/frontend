@@ -84,9 +84,6 @@ function Header() {
               <a href="marketplace" class="hover:text-gray-300 hover:underline">
                 Marketplace
               </a>
-
-              <a href="/" class="hover:text-gray-300"/>
-
               <a href="/" class="hover:text-gray-300">
 
                 Start a Project
