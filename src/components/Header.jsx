@@ -20,7 +20,7 @@ import {
 
 function Header() {
   const [connect, setConnect] = useState("Conect Wallet");
-  const [publicKey, setPublicKey] = useState("Wallet not connected...");
+  // const [publicKey, setPublicKey] = useState("Wallet not connected...");
   // const [loading, setLoading] = useState("Loading...");
   
 
@@ -38,7 +38,7 @@ function Header() {
 
       // setConnect(shortenedKey);
       setConnect(shortenedKey);
-      setPublicKey(retrievedKey);
+      // setPublicKey(retrievedKey);
 
       console.log(
         `Shortened Address: ${shortenedKey}, PublicKey: ${retrievedKey}`
@@ -71,12 +71,7 @@ function Header() {
               class="w-12 h-12 rounded-full mr-2"
             />{" "}</a>
 
-            <img
-              // src={Rixa}
-              src={Logo}
-              alt="User "
-              class="w-12 h-12 rounded-full mr-2"
-            />{" "}
+  
 
             {/* <!-- Links (Hidden on small screens) --> */}
             <div class="hidden md:flex space-x-4">
@@ -107,7 +102,7 @@ function Header() {
             {connect}
 
           </button>
-          <p>{publicKey}</p>
+          {/* <p>{publicKey}</p> */}
           {/* <!-- Mobile Menu Button (visible on small screens) --> */}
           <button class="md:hidden flex items-center px-3 py-2 border rounded text-gray-400 border-gray-600 hover:text-white hover:border-white">
             <svg
