@@ -67,7 +67,7 @@ function Header() {
             <img
               // src={Rixa}
               src={Logo}
-              alt="User photo"
+              alt="User "
               class="w-12 h-12 rounded-full mr-2"
             />{" "}</a>
 
@@ -85,7 +85,7 @@ function Header() {
                 Marketplace
               </a>
 
-              <a href="#" class="hover:text-gray-300"/>
+              <a href="/" class="hover:text-gray-300"/>
 
               <a href="/" class="hover:text-gray-300">
 
@@ -110,6 +110,7 @@ function Header() {
             {connect}
 
           </button>
+          <p>{publicKey}</p>
           {/* <!-- Mobile Menu Button (visible on small screens) --> */}
           <button class="md:hidden flex items-center px-3 py-2 border rounded text-gray-400 border-gray-600 hover:text-white hover:border-white">
             <svg
