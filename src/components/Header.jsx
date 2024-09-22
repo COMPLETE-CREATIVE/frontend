@@ -1,14 +1,3 @@
-
-// import React from "react";
-// import Logo from "../assets/logo.png";
-// // import Rixa from "../assets/Rixa.jpeg";
-
-// function Header() {
-//   document.addEventListener("DOMContentLoaded", function () {
-//     var menuButton = document.querySelector(".md:hidden");
-//     var mobileMenu = document.querySelector(".md:hidden + .hidden");
-
-
 import React, { useState } from "react";
 import Logo from "../assets/logo.png";
 import {
@@ -22,7 +11,6 @@ function Header() {
   const [connect, setConnect] = useState("Conect Wallet");
   // const [publicKey, setPublicKey] = useState("Wallet not connected...");
   // const [loading, setLoading] = useState("Loading...");
-  
 
   async function ConnectWallet() {
     console.log("Button pressed");
@@ -46,15 +34,14 @@ function Header() {
     }
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    var menuButton = document.querySelector(".md:hidden");
-    var mobileMenu = document.querySelector(".md:hidden + .hidden");
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   var menuButton = document.querySelector(".md:hidden");
+  //   var mobileMenu = document.querySelector(".md:hidden + .hidden");
 
-
-    menuButton.addEventListener("click", function () {
-      mobileMenu.classList.toggle("hidden");
-    });
-  });
+  //   menuButton.addEventListener("click", function () {
+  //     mobileMenu.classList.toggle("hidden");
+  //   });
+  // });
 
   return (
     <>
@@ -64,14 +51,13 @@ function Header() {
             {/* <!-- Logo --> */}
 
             <a href="/">
-            <img
-              // src={Rixa}
-              src={Logo}
-              alt="User "
-              class="w-12 h-12 rounded-full mr-2"
-            />{" "}</a>
-
-  
+              <img
+                // src={Rixa}
+                src={Logo}
+                alt="User "
+                class="w-12 h-12 rounded-full mr-2"
+              />{" "}
+            </a>
 
             {/* <!-- Links (Hidden on small screens) --> */}
             <div class="hidden md:flex space-x-4">
@@ -80,7 +66,6 @@ function Header() {
                 Marketplace
               </a>
               <a href="/" class="hover:text-gray-300">
-
                 Start a Project
               </a>
               <a href="about" class="hover:text-gray-300">
@@ -93,14 +78,11 @@ function Header() {
           </div>
           {/* <!-- Connect Wallet Button --> */}
 
-      
-
           <button
             class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded"
             onClick={ConnectWallet}
           >
             {connect}
-
           </button>
           {/* <p>{publicKey}</p> */}
           {/* <!-- Mobile Menu Button (visible on small screens) --> */}

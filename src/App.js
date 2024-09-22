@@ -5,6 +5,7 @@ import Blog from "./pages/Blog";
 import MarketPlace from "./pages/MarketPlace";
 import HomePage from "./pages/HomePage";
 import DetailsPage from "./pages/DetailsPage";
+import TestPage from "./pages/TestPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="blog" element={<Blog />}></Route>
             <Route path="marketplace" element={<MarketPlace />}></Route>
             <Route path="/details/:id" element={<DetailsPage/>}></Route>
+            <Route path="/test" element={<TestPage/>}></Route>
           </Route>
         </Routes>
       </Router>
