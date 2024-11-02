@@ -20,6 +20,7 @@ import {
   // signTransaction,
   requestAccess,
   setAllowed,
+  signTransaction,
 } from "@stellar/freighter-api";
 
 // export const isAppConnected = await isConnected();
@@ -64,6 +65,19 @@ export function shortenPublicKey(myAddress) {
     // return myAddress
   }
 }
+
+export const userSignTransaction = async ( xdr, network,signWith) => {
+  const signedTransactionRes = await signTransaction(xdr, {
+    network,
+    address: signWith,
+  });
+
+  if (signedTransactionRes.error) {
+    throw new Error(signedTransactionRes.error.message);
+  } else {
+    return signedTransactionRes.signedTxXdr;
+  }
+};
 
 export const TOKENS = [
   {

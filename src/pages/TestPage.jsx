@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import StellarSdk from "stellar-sdk"; // Import full SDK
+import * as StellarSDK from '@stellar/stellar-sdk'; // Import full SDK
 
 const TestPage = () => {
   const [tokenName, setTokenName] = useState("");
@@ -11,57 +11,67 @@ const TestPage = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
-  // Initialize the Stellar testnet server
-  const server = new StellarSdk.Server("https://horizon-testnet.stellar.org");
-  const networkPassphrase = StellarSdk.Networks.TESTNET; // Use full reference
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setError("");
-    setSuccess("");
+ 
+  const networkPassPhrase = StellarSDK.Networks.TESTNET
+  console.log(`Network: ${networkPassPhrase}`);
+  const server = new StellarSDK.Horizon.Server("https://horizon-testnet.stellar.org"); //If there's an error take out the / in the "or/g"
+  console.log(`Server: ${server}`)
+  const contractID = 'CC4VGQM4ETK77OXFXJGMLC73FVI3ZZUHCCMX3PIFOQ6NSC25H2PW3O73'
+  console.log(`ContractID: ${contractID}`);
+  
+  const stringToSymbol = (value) => {
+    return StellarSDK.nativeToScVal(value, {type: 'symbol'})
+  }
+  const amountToScVal = (account) => new StellarSDK.Address(account).toScVal()
 
-    try {
-      // Validate that the issuer and distributor addresses are valid
-      StellarSdk.Keypair.fromPublicKey(issuerAddress); // Check if issuer address is valid
-      StellarSdk.Keypair.fromPublicKey(distributorAddress); // Check if distributor address is valid
+  let params = {
+    fee: StellarSDK.BASE_FEE,
+    networkPassPhrase: StellarSDK.Networks.TESTNET
+  }
+  
+const handleSubmit = async (event) => {
+  event.preventDefault()
+  console.log(tokenName, tokenSymbol, totalSupply, issuerAddress, distributorAddress);
+  const sourceKeyPair = StellarSDK.Keypair.fromSecret('certain merge tumble stool charge lion disagree ensure attend fire sentence imitate')
+  const publicKey = sourceKeyPair.publicKey()
 
-      // Create an Asset (Token) on the Stellar blockchain
-      const token = new StellarSdk.Asset(tokenSymbol, issuerAddress);
 
-      // Load the distributor account to create a transaction
-      const distributorAccount = await server.loadAccount(distributorAddress);
 
-      // Build the transaction to trust the asset from the distributor's side
-      const transaction = new StellarSdk.TransactionBuilder(distributorAccount, {
-        fee: StellarSdk.BASE_FEE,
-        networkPassphrase,
-      })
-        .addOperation(
-          StellarSdk.Operation.changeTrust({
-            asset: token,
-            limit: totalSupply.toString(), // Set total supply limit
-          })
-        )
-        .setTimeout(100)
-        .build();
+  const functionName = 'init'
 
-      // Sign the transaction with the distributor's secret key
-      const distributorKeypair = StellarSdk.Keypair.fromSecret("<DISTRIBUTOR_SECRET>");
-      transaction.sign(distributorKeypair);
+  const args = [
+    {type: 'Symbol', value: tokenName},
+    {type: 'Symbol', value: tokenSymbol},
+    {type: 'Uint32', value: parseInt(totalSupply)},
+    {type: 'Address', value: issuerAddress},
+    {type: 'Address', value: distributorAddress},
+  ]
 
-      // Submit the transaction to the Stellar network
-      const response = await server.submitTransaction(transaction);
+  const account = await server.loadAccount(publicKey)
 
-      console.log("Transaction successful:", response);
-      setSuccess(`Token ${tokenSymbol} created successfully!`);
-    } catch (err) {
-      console.error("Transaction failed:", err);
-      setError("Failed to create token. Please check the inputs and try again.");
+  const transaction = new StellarSDK.TransactionBuilder(account,
+    {
+      fee: StellarSDK.BASE_FEE,
+      networkPassphrase: StellarSDK.Networks.TESTNET,
     }
+  )
+  .addOperation(StellarSDK.Operation.invokeHostFunction({
+    function: functionName,
+    args: args,
+    contractId: contractID,
+  }))
+  .setTimeout(10)
+  .build()
 
-    setLoading(false);
-  };
+  transaction.sign(sourceKeyPair)
+  const transactionResult = await server.submitTransaction(transaction)
+  console.log(transactionResult);
+  
+  
+
+}
+
 
   return (
     <div className="min-h-screen flex justify-center items-center bg-gray-100">
